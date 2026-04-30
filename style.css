@@ -1,4 +1,118 @@
-/* SOCIAL BUTTONS */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#0b0f1a;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAV */
+.nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px;
+text-align:center;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+color:#00d4ff;
+font-weight:bold;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.avatar{
+width:160px;
+height:160px;
+border-radius:50%;
+border:3px solid #00d4ff;
+box-shadow:0 0 40px #00d4ff;
+transition:0.3s;
+}
+
+.avatar:hover{
+transform:scale(1.05);
+}
+
+h1{
+font-size:50px;
+margin-top:20px;
+}
+
+h2{
+color:#00d4ff;
+}
+
+/* BUTTON */
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#00d4ff;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* SECTIONS */
+.section{
+padding:100px 10%;
+text-align:center;
+}
+
+/* GRID */
+.grid{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+padding:20px;
+border:1px solid rgba(255,255,255,0.1);
+border-radius:12px;
+color:white;
+text-decoration:none;
+transition:0.3s;
+background:rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#00d4ff;
+}
+
+/* REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* SOCIALS */
 .socials{
 margin-top:20px;
 display:flex;
@@ -14,9 +128,7 @@ text-decoration:none;
 color:white;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
 transition:0.3s;
-font-weight:bold;
 }
 
 .socials a:hover{
@@ -25,7 +137,7 @@ border-color:#00d4ff;
 color:#00d4ff;
 }
 
-/* CONTACT BOX */
+/* CONTACT */
 .contact-box{
 margin-top:20px;
 padding:25px;
@@ -42,4 +154,11 @@ color:#00d4ff;
 
 .center{
 justify-content:center;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+color:#888;
 }
