@@ -1,29 +1,331 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rasulbek Portfolio</title>
+export default function RasulbekPortfolio() {
+  const projects = [
+    {
+      title: "DL Image Project",
+      description:
+        "Deep Learning based computer vision project using TensorFlow and PyTorch.",
+      link: "https://github.com/rasulbekdeveloper907/DL_Image_Project",
+    },
+    {
+      title: "Food Demanding Prediction",
+      description:
+        "Machine Learning project for predicting food demand using advanced regression models.",
+      link: "https://github.com/rasulbekdeveloper907/Food_Demanding_Prediction",
+    },
+    {
+      title: "Healthy vs Unhealthy Foods",
+      description:
+        "AI classification system for healthy and unhealthy foods using Deep Learning.",
+      link: "https://github.com/rasulbekdeveloper907/Foods-Healthy-vs-Unhealthy-Prediction",
+    },
+    {
+      title: "Categorization News",
+      description:
+        "NLP based news categorization project using Machine Learning and NLP pipelines.",
+      link: "https://github.com/rasulbekdeveloper907/Categorization_News",
+    },
+    {
+      title: "Best Datasets ML Project",
+      description:
+        "Collection of useful datasets and Machine Learning experiments.",
+      link: "https://github.com/rasulbekdeveloper907/Best_Datasets_Ml_Project",
+    },
+  ];
 
-  <style>
-    body{
-      background:black;
-      color:white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      font-family:Arial;
-    }
+  const skills = [
+    "Python",
+    "SQL",
+    "TensorFlow",
+    "PyTorch",
+    "XGBoost",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Plotly",
+    "Git",
+    "Docker",
+    "Google Cloud",
+    "AWS",
+  ];
 
-    h1{
-      font-size:60px;
-    }
-  </style>
-</head>
-<body>
+  return (
+    <div className="bg-black text-white min-h-screen scroll-smooth">
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl border-b border-white/10 bg-black/50">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+          <h1 className="text-2xl font-bold tracking-widest">
+            Rasulbek<span className="text-cyan-400">.AI</span>
+          </h1>
 
-  <h1>Hello Rasulbek 🚀</h1>
+          <div className="hidden md:flex gap-8 text-sm uppercase tracking-wider">
+            <a href="#home" className="hover:text-cyan-400 transition">
+              Home
+            </a>
+            <a href="#about" className="hover:text-cyan-400 transition">
+              About
+            </a>
+            <a href="#skills" className="hover:text-cyan-400 transition">
+              Skills
+            </a>
+            <a href="#projects" className="hover:text-cyan-400 transition">
+              Projects
+            </a>
+            <a href="#contact" className="hover:text-cyan-400 transition">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
 
-</body>
-</html>
+      {/* HERO SECTION */}
+      <section
+        id="home"
+        className="min-h-screen flex flex-col justify-center items-center text-center px-6"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 via-transparent to-transparent blur-3xl" />
+
+        <p className="uppercase tracking-[8px] text-cyan-400 mb-6">
+          AI / ML Engineer
+        </p>
+
+        <h1 className="text-5xl md:text-8xl font-black leading-tight max-w-6xl">
+          Building Intelligent
+          <br />
+          AI Solutions
+        </h1>
+
+        <p className="max-w-2xl text-gray-400 mt-8 text-lg leading-relaxed">
+          Passionate AI & Machine Learning Engineer focused on Deep Learning,
+          Computer Vision, NLP and scalable ML systems.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4 mt-10">
+          <a
+            href="#projects"
+            className="px-8 py-4 rounded-2xl bg-cyan-500 text-black font-semibold hover:scale-105 transition"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="https://github.com/rasulbekdeveloper907"
+            target="_blank"
+            className="px-8 py-4 rounded-2xl border border-white/20 hover:border-cyan-400 transition"
+          >
+            GitHub
+          </a>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section
+        id="about"
+        className="max-w-6xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-16 items-center"
+      >
+        <div>
+          <p className="text-cyan-400 uppercase tracking-[6px] mb-4">
+            About Me
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+            AI Engineer &
+            <br />
+            Data Scientist
+          </h2>
+        </div>
+
+        <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+          <p>
+            I specialize in Machine Learning, Deep Learning, Computer Vision,
+            NLP and Data Science.
+          </p>
+
+          <p>
+            I enjoy building intelligent systems using TensorFlow, PyTorch,
+            Scikit-learn and cloud technologies.
+          </p>
+
+          <p>
+            My focus is creating scalable AI products, modern ML pipelines and
+            impactful real-world solutions.
+          </p>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="max-w-7xl mx-auto px-6 py-32">
+        <div className="text-center mb-20">
+          <p className="text-cyan-400 uppercase tracking-[6px] mb-4">
+            Technologies
+          </p>
+
+          <h2 className="text-5xl font-bold">Skills & Tools</h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="border border-white/10 bg-white/5 backdrop-blur-xl rounded-3xl p-6 text-center hover:border-cyan-400 hover:scale-105 transition duration-300"
+            >
+              <p className="font-semibold text-lg">{skill}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="max-w-7xl mx-auto px-6 py-32">
+        <div className="text-center mb-20">
+          <p className="text-cyan-400 uppercase tracking-[6px] mb-4">
+            Portfolio
+          </p>
+
+          <h2 className="text-5xl font-bold">Featured Projects</h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-10">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="rounded-3xl border border-white/10 bg-white/5 p-8 hover:border-cyan-400 transition duration-300 hover:-translate-y-2"
+            >
+              <div className="h-56 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 mb-8 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-center px-6">
+                  {project.title}
+                </h3>
+              </div>
+
+              <p className="text-gray-400 leading-relaxed mb-8">
+                {project.description}
+              </p>
+
+              <a
+                href={project.link}
+                target="_blank"
+                className="inline-block px-6 py-3 rounded-2xl bg-cyan-500 text-black font-semibold hover:scale-105 transition"
+              >
+                View Project
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="max-w-5xl mx-auto px-6 py-32 text-center"
+      >
+        <p className="text-cyan-400 uppercase tracking-[6px] mb-4">
+          Contact
+        </p>
+
+        <h2 className="text-5xl md:text-6xl font-bold mb-10">
+          Let’s Work Together
+        </h2>
+
+        <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed mb-12">
+          Interested in AI, Machine Learning or Data Science collaborations?
+          Feel free to contact me.
+        </p>
+
+        <div className="flex flex-col gap-6 items-center text-lg">
+          <a
+            href="mailto:rassiazzi9218@gmail.com"
+            className="hover:text-cyan-400 transition"
+          >
+            📧 rassiazzi9218@gmail.com
+          </a>
+
+          <a
+            href="tel:+998507309292"
+            className="hover:text-cyan-400 transition"
+          >
+            📱 +998 50 730 92 92
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ro-zmetov-rasulbek-12312b20a/?locale=ru"
+            target="_blank"
+            className="hover:text-cyan-400 transition"
+          >
+            LinkedIn Profile
+          </a>
+
+          <a
+            href="https://github.com/rasulbekdeveloper907"
+            target="_blank"
+            className="hover:text-cyan-400 transition"
+          >
+            GitHub Profile
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 py-8 text-center text-gray-500 text-sm">
+        © 2026 Rasulbek AI Portfolio. All rights reserved.
+      </footer>
+    </div>
+  );
+}
+
+/*
+========================================
+SETUP GUIDE
+========================================
+
+1. CREATE PROJECT
+
+npm create vite@latest
+
+2. SELECT:
+React
+JavaScript
+
+3. OPEN PROJECT
+
+cd your-project-name
+
+4. INSTALL TAILWIND
+
+npm install tailwindcss @tailwindcss/vite
+
+5. INSTALL DEPENDENCIES
+
+npm install framer-motion lucide-react
+
+6. RUN PROJECT
+
+npm install
+npm run dev
+
+========================================
+DEPLOY TO GITHUB
+========================================
+
+1. CREATE REPOSITORY:
+rasulbekdeveloper907.github.io
+
+2. INSTALL GH-PAGES
+
+npm install gh-pages --save-dev
+
+3. package.json:
+
+"homepage": "https://rasulbekdeveloper907.github.io"
+
+4. ADD SCRIPTS:
+
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+
+5. DEPLOY
+
+npm run deploy
+
+========================================
+*/
