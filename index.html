@@ -7,15 +7,26 @@
 <title>Rasulbek AI Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
+
+<!-- Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 </head>
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <h1>Initializing AI System...</h1>
+</div>
+
+<!-- CURSOR -->
 <div class="cursor"></div>
 
-<canvas id="particles"></canvas>
+<!-- 3D BACKGROUND -->
+<div id="three-container"></div>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav class="navbar">
   <div class="logo">Rasulbek.AI</div>
   <ul class="nav-links">
@@ -30,21 +41,21 @@
 <!-- HERO -->
 <section class="hero" id="home">
 
-  <div class="profile reveal">
-    <img src="assets/profile.jpg" alt="profile">
+  <div class="profile">
+    <img src="assets/profile.jpg">
   </div>
 
   <h2 class="typing"></h2>
 
-  <h1>Building Intelligent AI Solutions</h1>
+  <h1>AI & Machine Learning Engineer</h1>
 
   <p class="description">
-    AI / ML Engineer focused on Deep Learning, NLP, Computer Vision.
+    Building intelligent systems with Deep Learning, NLP and Computer Vision.
   </p>
 
   <div class="buttons">
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="https://github.com/rasulbekdeveloper907" target="_blank" class="btn-outline">GitHub</a>
+    <a href="#projects" class="btn">View Work</a>
+    <a href="https://github.com" class="btn-outline">GitHub</a>
   </div>
 
 </section>
@@ -52,67 +63,53 @@
 <!-- ABOUT -->
 <section class="about reveal">
   <h2>About Me</h2>
-  <p>I am AI Engineer working with ML, DL, NLP and Data Science.</p>
+  <p>AI Engineer focused on building scalable machine learning systems.</p>
 </section>
 
 <!-- SKILLS -->
 <section class="skills reveal">
   <h2>Skills</h2>
 
-  <div class="skills-grid">
-
-    <div class="skill-card glass">Python</div>
-    <div class="skill-card glass">TensorFlow</div>
-    <div class="skill-card glass">PyTorch</div>
-    <div class="skill-card glass">Scikit-learn</div>
-    <div class="skill-card glass">XGBoost</div>
-    <div class="skill-card glass">Pandas</div>
-    <div class="skill-card glass">NumPy</div>
-    <div class="skill-card glass">Docker</div>
-    <div class="skill-card glass">AWS</div>
-
+  <div class="grid">
+    <div class="card">Python</div>
+    <div class="card">TensorFlow</div>
+    <div class="card">PyTorch</div>
+    <div class="card">AWS</div>
+    <div class="card">Docker</div>
   </div>
+
 </section>
 
 <!-- PROJECTS -->
 <section class="projects reveal">
   <h2>Projects</h2>
 
-  <div class="project-grid">
+  <div class="grid">
 
-    <div class="project-card glass">
-      <h3>DL Image Project</h3>
+    <div class="card project">
+      <h3>DL Vision</h3>
       <p>Computer Vision AI model</p>
-      <a href="#">GitHub</a>
     </div>
 
-    <div class="project-card glass">
-      <h3>Food Prediction</h3>
-      <p>ML forecasting system</p>
-      <a href="#">GitHub</a>
-    </div>
-
-    <div class="project-card glass">
-      <h3>News NLP</h3>
+    <div class="card project">
+      <h3>NLP News</h3>
       <p>Text classification AI</p>
-      <a href="#">GitHub</a>
     </div>
 
   </div>
+
 </section>
 
 <!-- CONTACT -->
 <section class="contact reveal">
   <h2>Contact</h2>
 
-  <p>Email: rassiazzi9218@gmail.com</p>
+  <p>Email: example@gmail.com</p>
   <p>Phone: +998 50 730 92 92</p>
-
-  <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
 </section>
 
 <footer>
-  © 2026 Rasulbek AI Portfolio
+© 2026 Rasulbek AI
 </footer>
 
 <script src="script.js"></script>

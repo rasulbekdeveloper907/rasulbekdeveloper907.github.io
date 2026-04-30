@@ -1,70 +1,69 @@
+
+// LOADER
+window.addEventListener("load",()=>{
+document.getElementById("loader").style.display="none";
+});
+
 // CURSOR
-const cursor = document.querySelector(".cursor");
+const cursor=document.querySelector(".cursor");
 
 document.addEventListener("mousemove",(e)=>{
-cursor.style.left = e.clientX + "px";
-cursor.style.top = e.clientY + "px";
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
 });
 
 // TYPING
-const text = "AI / ML Engineer";
-let i = 0;
+const text="AI / ML Engineer";
+let i=0;
 
-function type(){
-if(i < text.length){
-document.querySelector(".typing").innerHTML += text[i];
+function typing(){
+if(i<text.length){
+document.querySelector(".typing").innerHTML+=text[i];
 i++;
-setTimeout(type,100);
+setTimeout(typing,100);
 }
 }
-type();
+typing();
 
 // SCROLL REVEAL
 window.addEventListener("scroll",()=>{
 document.querySelectorAll(".reveal").forEach(el=>{
-let top = el.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
+if(el.getBoundingClientRect().top<window.innerHeight-100){
 el.classList.add("active");
 }
 });
 });
 
-// PARTICLES
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+// SOUND EFFECT (hover)
+const audio=new Audio("https://www.soundjay.com/buttons/sounds/button-16.mp3");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-
-for(let i=0;i<70;i++){
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2,
-dx:(Math.random()-0.5),
-dy:(Math.random()-0.5)
+document.querySelectorAll("a,.card").forEach(el=>{
+el.addEventListener("mouseenter",()=>{
+audio.currentTime=0;
+audio.play();
 });
-}
+});
+
+// THREE JS BACKGROUND
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+
+const renderer=new THREE.WebGLRenderer({alpha:true});
+renderer.setSize(window.innerWidth,window.innerHeight);
+document.getElementById("three-container").appendChild(renderer.domElement);
+
+const geometry=new THREE.TorusGeometry(10,3,16,100);
+const material=new THREE.MeshBasicMaterial({color:0x00ffff,wireframe:true});
+const torus=new THREE.Mesh(geometry,material);
+
+scene.add(torus);
+camera.position.z=30;
 
 function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-particles.forEach(p=>{
-p.x += p.dx;
-p.y += p.dy;
-
-if(p.x<0) p.x=canvas.width;
-if(p.y<0) p.y=canvas.height;
-
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-ctx.fillStyle="#00ffff";
-ctx.fill();
-});
-
 requestAnimationFrame(animate);
+torus.rotation.x+=0.01;
+torus.rotation.y+=0.01;
+renderer.render(scene,camera);
 }
 
 animate();
