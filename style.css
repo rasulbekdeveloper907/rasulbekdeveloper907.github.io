@@ -1,54 +1,107 @@
-<!-- HERO -->
-<section class="hero" id="home">
-  <h1>AI / ML Engineer</h1>
-</section>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>I am AI Engineer focused on Machine Learning, Deep Learning and NLP.</p>
-</section>
+body{
+background:#fff;
+color:#111;
+}
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
+/* NAV */
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:white;
+position:fixed;
+width:100%;
+top:0;
+border-bottom:1px solid #eee;
+}
 
-  <p>Email: <span>rassiazzi9218@gmail.com</span></p>
-  <p>Phone: <span>+998 50 730 92 92</span></p>
-</section>
+.logo{
+color:#0077ff;
+font-weight:bold;
+font-size:22px;
+}
 
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
+.links a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+}
 
-  <div class="skills-grid">
-    <div class="skill-card">Python 🐍</div>
-    <div class="skill-card">SQL 📊</div>
-    <div class="skill-card">TensorFlow 🔬</div>
-    <div class="skill-card">PyTorch 🔥</div>
-    <div class="skill-card">Scikit-learn 🤖</div>
-    <div class="skill-card">Pandas 📈</div>
-    <div class="skill-card">NumPy ➗</div>
-    <div class="skill-card">Docker 🐳</div>
-    <div class="skill-card">AWS ☁️</div>
-    <div class="skill-card">Git 💻</div>
-  </div>
-</section>
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+border:4px solid #0077ff;
+object-fit:cover;
+}
 
-  <div class="grid">
-    <div class="card">DL Image Project</div>
-    <div class="card">Food Prediction</div>
-    <div class="card">News NLP</div>
-    <div class="card">ML Dataset Project</div>
-    <div class="card">Food Classification</div>
-  </div>
-</section>
+.hero h1{
+font-size:50px;
+color:#111;
+}
 
-<!-- FOOTER -->
-<footer>
-  © 2026 Rasulbek AI Portfolio
-</footer>
+.hero p{
+color:#666;
+margin-top:10px;
+}
+
+/* SECTIONS */
+section{
+padding:100px 10%;
+text-align:center;
+}
+
+h2{
+font-size:40px;
+color:#0077ff;
+margin-bottom:30px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border:1px solid #eee;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* CONTACT */
+#contact p{
+font-size:20px;
+margin:10px 0;
+}
+
+#contact span{
+color:#0077ff;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+}
