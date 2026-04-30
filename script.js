@@ -1,1 +1,1 @@
-console.log("Dark Portfolio Loaded 🚀");
+console.log("Clean portfolio loaded 🚀");
