@@ -6,17 +6,8 @@ font-family:Arial;
 }
 
 body{
-background:#0a0a0a;
-color:white;
-overflow-x:hidden;
-}
-
-/* 3D CANVAS */
-#bg{
-position:fixed;
-top:0;
-left:0;
-z-index:-1;
+background:#ffffff;
+color:#111;
 }
 
 /* NAV */
@@ -24,15 +15,22 @@ z-index:-1;
 position:fixed;
 top:0;
 width:100%;
-padding:20px;
-text-align:center;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+padding:15px 50px;
+background:#fff;
+border-bottom:1px solid #eee;
 }
 
 .logo{
-color:#00d4ff;
 font-weight:bold;
+color:#000;
+}
+
+.nav-links a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
 }
 
 /* HERO */
@@ -49,58 +47,81 @@ text-align:center;
 width:180px;
 height:180px;
 border-radius:50%;
-border:3px solid #00d4ff;
-box-shadow:0 0 40px #00d4ff;
+object-fit:cover;
+margin-bottom:20px;
+border:3px solid #ddd;
 }
 
-h1{
+.hero h1{
 font-size:50px;
-margin-top:20px;
 }
 
-h2{
-color:#00d4ff;
-margin-top:10px;
+.socials{
+margin-top:15px;
+display:flex;
+gap:15px;
+}
+
+.socials a{
+padding:10px 15px;
+border:1px solid #ddd;
+border-radius:20px;
+text-decoration:none;
+color:#111;
+transition:0.3s;
+}
+
+.socials a:hover{
+background:#000;
+color:#fff;
 }
 
 /* SECTIONS */
 .section{
-padding:100px 10%;
+padding:80px 10%;
 text-align:center;
+}
+
+.section h2{
+font-size:40px;
+margin-bottom:30px;
 }
 
 /* GRID */
 .grid{
 display:flex;
-justify-content:center;
 gap:20px;
+justify-content:center;
 flex-wrap:wrap;
 }
 
 .card{
 padding:20px;
-border:1px solid #333;
-border-radius:12px;
-color:white;
+border:1px solid #ddd;
+border-radius:10px;
+min-width:150px;
 text-decoration:none;
+color:#111;
 transition:0.3s;
+background:#fafafa;
 }
 
 .card:hover{
-transform:scale(1.1);
-border-color:#00d4ff;
+transform:translateY(-5px);
+background:#000;
+color:#fff;
 }
 
-/* REVEAL */
-.reveal{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
+/* CONTACT */
+.contact p{
+font-size:20px;
+margin:10px 0;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:30px;
-color:#888;
+border-top:1px solid #eee;
+margin-top:50px;
 }

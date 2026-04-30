@@ -3,23 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Rasulbek AI Portfolio</title>
+<title>Rasulbek Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Three.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
 
-<!-- 3D BACKGROUND -->
-<canvas id="bg"></canvas>
-
 <!-- NAV -->
 <header class="nav">
-  <div class="logo">Rasulbek.AI</div>
+  <div class="logo">Rasulbek.dev</div>
+
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 </header>
 
 <!-- HERO -->
@@ -28,31 +27,30 @@
   <img src="assets/profile.jpg" class="avatar">
 
   <h1>Rasulbek</h1>
+  <p>AI / ML Engineer | Python Developer</p>
 
-  <!-- typing text -->
-  <h2><span id="typing"></span></h2>
-
-  <p>AI / ML Engineer • Python • Deep Learning</p>
+  <div class="socials">
+    <a href="https://github.com/rasulbekdeveloper907" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/ro-zmetov-rasulbek-12312b20a/?locale=ru" target="_blank">LinkedIn</a>
+  </div>
 
 </section>
 
 <!-- SKILLS -->
-<section class="section reveal">
+<section id="skills" class="section">
   <h2>Skills</h2>
-  <p>Python • TensorFlow • PyTorch • SQL • AWS</p>
-</section>
 
-<!-- GITHUB PROFILE -->
-<section class="section reveal">
-  <h2>GitHub Profile</h2>
-
-  <div id="github-card">
-    Loading GitHub data...
+  <div class="grid">
+    <div class="card">Python</div>
+    <div class="card">SQL</div>
+    <div class="card">TensorFlow</div>
+    <div class="card">PyTorch</div>
+    <div class="card">Scikit-learn</div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section reveal">
+<section id="projects" class="section">
   <h2>Projects</h2>
 
   <div class="grid">
@@ -61,31 +59,44 @@
       DL Image Project
     </a>
 
-    <a class="card" href="https://github.com/rasulbekdeveloper907/Food_Demanding_Prediction">
-      Food Prediction
+    <a class="card" href="https://github.com/rasulbekdeveloper907/Food_Demanding_Prediction" target="_blank">
+      Food Demand Prediction
     </a>
 
-    <a class="card" href="https://github.com/rasulbekdeveloper907/Categorization_News">
-      NLP Project
+    <a class="card" href="https://github.com/rasulbekdeveloper907/Foods-Healthy-vs-Unhealthy-Prediction" target="_blank">
+      Food Classification
     </a>
 
+    <a class="card" href="https://github.com/rasulbekdeveloper907/Categorization_News" target="_blank">
+      News NLP Project
+    </a>
+
+    <a class="card" href="https://github.com/rasulbekdeveloper907/Best_Datasets_Ml_Project" target="_blank">
+      ML Dataset Hub
+    </a>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+
+  <h2>Contact</h2>
+
+  <p>📧 Email: <b>rassiazzi9218@gmail.com</b></p>
+  <p>📱 Phone: <b>+998 50 730 92 92</b></p>
+
+  <div class="socials">
+    <a href="https://github.com/rasulbekdeveloper907" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/ro-zmetov-rasulbek-12312b20a/?locale=ru" target="_blank">LinkedIn</a>
   </div>
 
 </section>
 
-<!-- CONTACT -->
-<section class="section reveal">
-  <h2>Contact</h2>
-
-  <p>Email: <b>rassiazzi9218@gmail.com</b></p>
-  <p>Phone: <b>+998 50 730 92 92</b></p>
-</section>
-
 <footer>
-  © 2026 Rasulbek AI
+© 2026 Rasulbek Portfolio
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
