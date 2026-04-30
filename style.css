@@ -6,8 +6,8 @@ font-family:Arial;
 }
 
 body{
-background:#050b1f;
-color:white;
+background:#ffffff;
+color:#111;
 }
 
 /* NAV */
@@ -15,28 +15,28 @@ color:white;
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
+background:white;
 position:fixed;
 width:100%;
 top:0;
+border-bottom:1px solid #eee;
 }
 
 .logo{
-color:#00d4ff;
+color:#0077ff;
 font-size:22px;
 font-weight:bold;
 }
 
 .links a{
-color:white;
 margin-left:20px;
 text-decoration:none;
-transition:0.3s;
+color:#333;
+font-weight:500;
 }
 
 .links a:hover{
-color:#00d4ff;
+color:#0077ff;
 }
 
 /* HERO */
@@ -50,30 +50,32 @@ text-align:center;
 }
 
 .profile{
-width:180px;
-height:180px;
+width:200px;
+height:200px;
 border-radius:50%;
-border:4px solid #00d4ff;
-box-shadow:0 0 30px #00d4ff;
+border:4px solid #0077ff;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 margin-bottom:20px;
+object-fit:cover;
 }
 
 .hero h1{
 font-size:60px;
-color:#00d4ff;
+color:#111;
 }
 
 .hero p{
-color:#aaa;
+color:#666;
 margin-top:10px;
+font-size:18px;
 }
 
 /* BUTTON */
 .btn{
 margin-top:20px;
 padding:12px 30px;
-background:#00d4ff;
-color:black;
+background:#0077ff;
+color:white;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
@@ -87,7 +89,7 @@ text-align:center;
 
 h2{
 font-size:40px;
-color:#00d4ff;
+color:#0077ff;
 margin-bottom:30px;
 }
 
@@ -99,31 +101,34 @@ gap:20px;
 }
 
 .card{
-background:#0d1630;
+background:white;
 padding:20px;
 border-radius:15px;
-border:1px solid #1f2a4d;
+border:1px solid #eee;
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-border-color:#00d4ff;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
 }
 
 .card a{
-color:#00d4ff;
+color:#0077ff;
 text-decoration:none;
+font-weight:bold;
 }
 
 /* CONTACT */
 #contact span{
-color:#00d4ff;
+color:#0077ff;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:30px;
-color:#666;
+color:#777;
+border-top:1px solid #eee;
 }
