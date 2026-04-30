@@ -1,168 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Rasulbek AI Portfolio</title>
+<title>Rasulbek AI Portfolio</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Rasulbek.AI</div>
+<div class="cursor"></div>
 
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<canvas id="particles"></canvas>
 
-  <!-- HERO -->
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Rasulbek.AI</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
 <section class="hero" id="home">
 
-    <div class="profile">
-        <img src="assets/profile.jpg" alt="profile">
-    </div>
+  <div class="profile reveal">
+    <img src="assets/profile.jpg" alt="profile">
+  </div>
 
-    <p class="subtitle">AI / ML ENGINEER</p>
+  <h2 class="typing"></h2>
 
-    <h1>
-        Building Intelligent <br>
-        AI Solutions
-    </h1>
+  <h1>Building Intelligent AI Solutions</h1>
+
+  <p class="description">
+    AI / ML Engineer focused on Deep Learning, NLP, Computer Vision.
+  </p>
+
+  <div class="buttons">
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="https://github.com/rasulbekdeveloper907" target="_blank" class="btn-outline">GitHub</a>
+  </div>
 
 </section>
 
-    <p class="description">
-      Passionate AI Engineer focused on Machine Learning,
-      Deep Learning, Computer Vision and NLP.
-    </p>
+<!-- ABOUT -->
+<section class="about reveal">
+  <h2>About Me</h2>
+  <p>I am AI Engineer working with ML, DL, NLP and Data Science.</p>
+</section>
 
-    <div class="buttons">
-      <a href="#projects" class="btn">View Projects</a>
+<!-- SKILLS -->
+<section class="skills reveal">
+  <h2>Skills</h2>
 
-      <a href="https://github.com/rasulbekdeveloper907"
-         target="_blank"
-         class="btn-outline">
-         GitHub
-      </a>
+  <div class="skills-grid">
+
+    <div class="skill-card glass">Python</div>
+    <div class="skill-card glass">TensorFlow</div>
+    <div class="skill-card glass">PyTorch</div>
+    <div class="skill-card glass">Scikit-learn</div>
+    <div class="skill-card glass">XGBoost</div>
+    <div class="skill-card glass">Pandas</div>
+    <div class="skill-card glass">NumPy</div>
+    <div class="skill-card glass">Docker</div>
+    <div class="skill-card glass">AWS</div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects reveal">
+  <h2>Projects</h2>
+
+  <div class="project-grid">
+
+    <div class="project-card glass">
+      <h3>DL Image Project</h3>
+      <p>Computer Vision AI model</p>
+      <a href="#">GitHub</a>
     </div>
 
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-
-    <h2>About Me</h2>
-
-    <p>
-      I specialize in AI, Machine Learning,
-      Deep Learning, NLP and Data Science.
-    </p>
-
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills" id="skills">
-
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-
-      <div class="skill-card">Python</div>
-      <div class="skill-card">TensorFlow</div>
-      <div class="skill-card">PyTorch</div>
-      <div class="skill-card">Scikit-learn</div>
-      <div class="skill-card">XGBoost</div>
-      <div class="skill-card">Pandas</div>
-      <div class="skill-card">NumPy</div>
-      <div class="skill-card">Docker</div>
-      <div class="skill-card">AWS</div>
-      <div class="skill-card">Google Cloud</div>
-
+    <div class="project-card glass">
+      <h3>Food Prediction</h3>
+      <p>ML forecasting system</p>
+      <a href="#">GitHub</a>
     </div>
 
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-
-    <h2>Projects</h2>
-
-    <div class="project-grid">
-
-      <div class="project-card">
-        <h3>DL Image Project</h3>
-
-        <p>
-          Deep Learning Computer Vision project.
-        </p>
-
-        <a href="https://github.com/rasulbekdeveloper907/DL_Image_Project"
-           target="_blank">
-           View Project
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>Food Demand Prediction</h3>
-
-        <p>
-          Machine Learning prediction system.
-        </p>
-
-        <a href="https://github.com/rasulbekdeveloper907/Food_Demanding_Prediction"
-           target="_blank">
-           View Project
-        </a>
-      </div>
-
-      <div class="project-card">
-        <h3>News Categorization</h3>
-
-        <p>
-          NLP based news classification project.
-        </p>
-
-        <a href="https://github.com/rasulbekdeveloper907/Categorization_News"
-           target="_blank">
-           View Project
-        </a>
-      </div>
-
+    <div class="project-card glass">
+      <h3>News NLP</h3>
+      <p>Text classification AI</p>
+      <a href="#">GitHub</a>
     </div>
 
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
+<!-- CONTACT -->
+<section class="contact reveal">
+  <h2>Contact</h2>
 
-    <h2>Contact</h2>
+  <p>Email: rassiazzi9218@gmail.com</p>
+  <p>Phone: +998 50 730 92 92</p>
 
-    <p>Email: rassiazzi9218@gmail.com</p>
+  <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+</section>
 
-    <p>Phone: +998 50 730 92 92</p>
+<footer>
+  © 2026 Rasulbek AI Portfolio
+</footer>
 
-    <a href="https://www.linkedin.com/in/ro-zmetov-rasulbek-12312b20a/?locale=ru"
-       target="_blank">
-       LinkedIn
-    </a>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Rasulbek AI Portfolio</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
