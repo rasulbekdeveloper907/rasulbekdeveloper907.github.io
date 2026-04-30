@@ -1,1 +1,1 @@
-console.log("Rasulbek AI Portfolio Loaded 🚀");
+console.log("Portfolio Loaded 🚀");
