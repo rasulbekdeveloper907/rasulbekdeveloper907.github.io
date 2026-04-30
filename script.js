@@ -1,8 +1,8 @@
-console.log("Portfolio Loaded 🚀");
+console.log("Portfolio loaded 🚀");
 
-// =================
-// ⌨️ Typing effect
-// =================
+// ===================
+// ⌨️ TYPING EFFECT
+// ===================
 const text = "AI Engineer";
 let i = 0;
 
@@ -15,9 +15,10 @@ function type(){
 }
 type();
 
-// =================
-// 📜 Scroll reveal
-// =================
+
+// ===================
+// 📜 SCROLL REVEAL
+// ===================
 const elements = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
@@ -28,16 +29,17 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// =================
-// 🔗 GitHub API
-// =================
+
+// ===================
+// 🔗 GITHUB API
+// ===================
 fetch("https://api.github.com/users/rasulbekdeveloper907")
 .then(res => res.json())
 .then(data => {
   document.getElementById("github").innerHTML = `
-    <p>Username: <b>${data.login}</b></p>
-    <p>Repos: <b>${data.public_repos}</b></p>
-    <p>Followers: <b>${data.followers}</b></p>
-    <a href="${data.html_url}" target="_blank" style="color:#00d4ff">Open GitHub →</a>
+    <p>Username: ${data.login}</p>
+    <p>Repos: ${data.public_repos}</p>
+    <p>Followers: ${data.followers}</p>
+    <a href="${data.html_url}" target="_blank" style="color:#00d4ff">Open GitHub</a>
   `;
 });
