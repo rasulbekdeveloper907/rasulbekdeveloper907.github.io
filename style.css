@@ -6,95 +6,77 @@ font-family:Arial;
 }
 
 body{
-background:linear-gradient(to bottom,#dff6ff,#ffffff);
-color:#111;
-}
-
-/* TOP BAR */
-.top-contact{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:center;
-gap:25px;
-padding:10px;
-background:#eaf6ff;
-z-index:2000;
-}
-
-.top-contact a{
-text-decoration:none;
-color:#0077ff;
-font-weight:bold;
+background:#050b1f;
+color:white;
 }
 
 /* NAV */
 .navbar{
-position:fixed;
-top:45px;
-width:100%;
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
-background:rgba(255,255,255,0.8);
+background:rgba(0,0,0,0.4);
 backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+top:0;
 }
 
 .logo{
-color:#0077ff;
-font-size:24px;
+color:#00d4ff;
+font-size:22px;
 font-weight:bold;
 }
 
-.nav-links{
-display:flex;
-gap:20px;
-list-style:none;
+.links a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+transition:0.3s;
 }
 
-.nav-links a{
-text-decoration:none;
-color:#333;
+.links a:hover{
+color:#00d4ff;
 }
 
 /* HERO */
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding-top:120px;
+}
+
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+border:4px solid #00d4ff;
+box-shadow:0 0 30px #00d4ff;
+margin-bottom:20px;
 }
 
 .hero h1{
 font-size:60px;
-color:#0077ff;
+color:#00d4ff;
 }
 
-.hero h2{
-font-size:28px;
-}
-
-/* PROFILE */
-.profile img{
-width:260px;
-height:260px;
-border-radius:50%;
-border:5px solid #0077ff;
-box-shadow:0 0 30px rgba(0,119,255,0.4);
+.hero p{
+color:#aaa;
+margin-top:10px;
 }
 
 /* BUTTON */
 .btn{
 margin-top:20px;
 padding:12px 30px;
-background:#0077ff;
-color:white;
+background:#00d4ff;
+color:black;
 border-radius:30px;
 text-decoration:none;
+font-weight:bold;
 }
 
 /* SECTIONS */
@@ -104,34 +86,39 @@ text-align:center;
 }
 
 h2{
-font-size:50px;
+font-size:40px;
+color:#00d4ff;
 margin-bottom:30px;
-color:#0077ff;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
 }
 
 .card{
-background:white;
+background:#0d1630;
 padding:20px;
 border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border:1px solid #1f2a4d;
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
+border-color:#00d4ff;
 }
 
-/* CONTACT BIG */
-.big{
-font-size:26px;
-margin:20px 0;
+.card a{
+color:#00d4ff;
+text-decoration:none;
+}
+
+/* CONTACT */
+#contact span{
+color:#00d4ff;
 }
 
 /* FOOTER */
