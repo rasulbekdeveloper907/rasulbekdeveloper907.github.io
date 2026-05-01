@@ -1,35 +1,10 @@
-const text = [
-  "AI/ML Engineer 🤖",
-  "Data Scientist 📊",
-  "Deep Learning Developer 🧠"
-];
+document.querySelectorAll(".cv-section").forEach((el, i) => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(20px)";
 
-let i = 0;
-let j = 0;
-let isDeleting = false;
-
-function type() {
-  const el = document.querySelector(".typing");
-  const current = text[i];
-
-  if (!isDeleting) {
-    el.textContent = current.substring(0, j++);
-  } else {
-    el.textContent = current.substring(0, j--);
-  }
-
-  if (!isDeleting && j === current.length) {
-    isDeleting = true;
-    setTimeout(type, 1200);
-    return;
-  }
-
-  if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % text.length;
-  }
-
-  setTimeout(type, isDeleting ? 50 : 90);
-}
-
-type();
+  setTimeout(() => {
+    el.style.transition = "0.6s ease";
+    el.style.opacity = 1;
+    el.style.transform = "translateY(0)";
+  }, i * 200);
+});
