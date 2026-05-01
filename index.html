@@ -4,18 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rasulbek | AI/ML Engineer</title>
+
   <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-<!-- SKY ELEMENTS -->
-<div class="sky"></div>
-<div class="clouds">☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️</div>
+<!-- BACKGROUND -->
+<div class="bg"></div>
 <div class="stars"></div>
 
+<!-- HEADER -->
 <header>
   <div class="logo">🚀 Rasulbek.dev</div>
+
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -26,62 +28,90 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="assets/profile.jpg" class="profile"/>
 
-  <h1>Ro‘zmetov Rasulbek 👋</h1>
+  <div class="hero-card">
+    <img src="assets/profile.jpg" class="profile" alt="profile"/>
 
-  <h2 class="typing"></h2>
+    <h1>Ro‘zmetov Rasulbek</h1>
 
-  <div class="links">
-    <a href="https://github.com/rasulbekdeveloper907">🐙 GitHub</a>
-    <a href="https://www.linkedin.com/in/ro-zmetov-rasulbek-12312b20a/?locale=ru">💼 LinkedIn</a>
+    <h2 class="typing"></h2>
+
+    <p class="subtitle">
+      AI/ML Engineer • Data Scientist • Deep Learning Developer
+    </p>
+
+    <div class="links">
+      <a href="https://github.com/rasulbekdeveloper907" target="_blank">🐙 GitHub</a>
+      <a href="https://www.linkedin.com" target="_blank">💼 LinkedIn</a>
+    </div>
   </div>
+
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="glass">
+<section id="about" class="card-section">
   <h2>🌟 About Me</h2>
   <p>
-    AI/ML Engineer | Data Scientist. Real-world machine learning,
-    deep learning va data-driven solutions ustida ishlayman 🚀
+    I am an AI/ML Engineer focused on building real-world machine learning systems,
+    deep learning models, and data-driven applications.
   </p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="glass">
+<section id="skills" class="card-section">
   <h2>💻 Skills</h2>
 
-  <p>🐍 Python | SQL</p>
-  <p>🧠 TensorFlow | PyTorch | XGBoost | Scikit-learn</p>
-  <p>📊 Pandas | NumPy | Matplotlib | Seaborn | Plotly</p>
-  <p>☁️ Git | Docker | AWS | Google Cloud</p>
+  <div class="skill-grid">
+    <div class="skill">🐍 Python</div>
+    <div class="skill">🗄 SQL</div>
+    <div class="skill">🧠 TensorFlow</div>
+    <div class="skill">🔥 PyTorch</div>
+    <div class="skill">📊 Pandas</div>
+    <div class="skill">📉 Scikit-learn</div>
+    <div class="skill">☁️ AWS</div>
+    <div class="skill">🐳 Docker</div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="card-section">
   <h2>🚀 Projects</h2>
 
-  <div class="grid">
+  <div class="project-grid">
 
-    <div class="card">📷 DL Image Project<br><a href="#">GitHub</a></div>
-    <div class="card">🍔 Food Demand Prediction<br><a href="#">GitHub</a></div>
-    <div class="card">🥗 Healthy vs Unhealthy<br><a href="#">GitHub</a></div>
-    <div class="card">📰 News Categorization<br><a href="#">GitHub</a></div>
-    <div class="card">📦 ML Datasets Project<br><a href="#">GitHub</a></div>
+    <div class="project-card">
+      <h3>Image Classification</h3>
+      <p>Deep Learning CNN model for image recognition</p>
+      <a href="#">GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Food Demand Forecast</h3>
+      <p>ML time-series prediction project</p>
+      <a href="#">GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>News Classifier</h3>
+      <p>NLP text classification system</p>
+      <a href="#">GitHub →</a>
+    </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="glass">
+<section id="contact" class="card-section">
   <h2>📬 Contact</h2>
 
-  <p>📞 +99850 730 92 92</p>
-  <p>📧 rassiazzi9218@gmail.com</p>
+  <div class="contact-box">
+    <p>📞 +998 50 730 92 92</p>
+    <p>📧 rassiazzi9218@gmail.com</p>
+  </div>
 </section>
 
 <footer>
-  <p>✨ Built by Rasulbek | 2026</p>
+  <p>✨ Built with passion by Rasulbek • 2026</p>
 </footer>
 
 <script src="script.js"></script>
