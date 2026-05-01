@@ -9,109 +9,105 @@
 
 <body>
 
+<!-- NAV -->
 <header>
   <div class="logo">🚀 Rasulbek.dev</div>
 
   <nav>
+    <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
     <a href="#cv">CV</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="section hero">
   <img src="assets/profile.jpg" class="profile"/>
 
   <h1>Ro‘zmetov Rasulbek</h1>
   <h2 class="typing"></h2>
 
   <div class="links">
-    <a href="https://github.com/rasulbekdeveloper907">GitHub</a>
-    <a href="https://linkedin.com">LinkedIn</a>
+    <a href="https://github.com/rasulbekdeveloper907" target="_blank">🐙 GitHub</a>
+    <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
   </div>
 </section>
 
-<!-- MAIN GRID (PORTFOLIO + CV) -->
-<section class="main-grid">
+<!-- ABOUT -->
+<section id="about" class="section card">
+  <h2>🌟 About Me</h2>
+  <p>
+    AI/ML Engineer with strong background in machine learning, deep learning,
+    and real-world AI systems. Focused on production-ready solutions.
+  </p>
+</section>
 
-  <!-- LEFT SIDE (PORTFOLIO) -->
-  <div>
+<!-- CV -->
+<section id="cv" class="section card">
+  <h2>📄 Summary</h2>
 
-    <section id="about" class="card">
-      <h2>🌟 About Me</h2>
-      <p>AI/ML Engineer focused on real-world machine learning and deep learning systems.</p>
-    </section>
+  <p>Creative and analytical ML Engineer with strong applied mathematics background.</p>
+  <p>Experienced in ML/DL model development, deployment, and API systems.</p>
+  <p>Passionate about scalable AI systems and automation.</p>
 
-    <section id="skills" class="card">
-      <h2>💻 Skills</h2>
-      <p>Python | SQL | TensorFlow | PyTorch | Pandas | AWS | Docker</p>
-    </section>
+  <h3>🎓 Education</h3>
+  <p>Bachelor of Machinery Technology — Tashkent State University (2013–2017)</p>
 
-    <section id="projects" class="card">
-      <h2>🚀 Projects</h2>
-      <p>✔ Hotel Booking ML<br>✔ Food Demand Prediction<br>✔ NLP YouTube Classification</p>
-    </section>
+  <h3>🌍 Languages</h3>
+  <p>Uzbek (Native) | English (Fluent) | Russian (Intermediate)</p>
+</section>
 
+<!-- PROJECTS -->
+<section id="projects" class="section card">
+  <h2>🚀 Projects</h2>
+
+  <div class="project">
+    <h3>Hotel Booking Cancellation</h3>
+    <a href="#">GitHub ↗</a>
   </div>
 
-  <!-- RIGHT SIDE (CV) -->
-  <div id="cv" class="cv">
-
-    <h2>📄 CV SUMMARY</h2>
-
-    <div class="cv-block">
-      <h3>SUMMARY</h3>
-      <ul>
-        <li>Creative ML Engineer with strong mathematical background</li>
-        <li>Experienced in ML/DL systems and deployment</li>
-        <li>Strong focus on real-world AI solutions</li>
-      </ul>
-    </div>
-
-    <div class="cv-block">
-      <h3>EDUCATION</h3>
-      <p>Bachelor of Machinery Technology</p>
-      <p>Tashkent State University (2013 – 2017)</p>
-    </div>
-
-    <div class="cv-block">
-      <h3>TOOLS</h3>
-      <p>Python, SQL, Scikit-learn, TensorFlow, PyTorch, Docker, AWS</p>
-    </div>
-
-    <div class="cv-block">
-      <h3>CORE SKILLS</h3>
-      <ul>
-        <li>ML / DL Development</li>
-        <li>API (FastAPI)</li>
-        <li>Data Engineering</li>
-        <li>Model Deployment</li>
-      </ul>
-    </div>
-
-    <div class="cv-block">
-      <h3>LANGUAGES</h3>
-      <p>Uzbek (Native)</p>
-      <p>English (Fluent)</p>
-      <p>Russian (Intermediate)</p>
-    </div>
-
+  <div class="project">
+    <h3>Food Demand Prediction</h3>
+    <a href="#">GitHub ↗</a>
   </div>
 
+  <div class="project">
+    <h3>YouTube Categorization</h3>
+    <a href="#">GitHub ↗</a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section card">
+  <h2>💻 Skills</h2>
+
+  <div class="tags">
+    <span>Python</span>
+    <span>SQL</span>
+    <span>TensorFlow</span>
+    <span>PyTorch</span>
+    <span>Scikit-learn</span>
+    <span>Pandas</span>
+    <span>NumPy</span>
+    <span>Docker</span>
+    <span>AWS</span>
+    <span>Git</span>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="card">
+<section id="contact" class="section card">
   <h2>📬 Contact</h2>
-  <p>📞 +998 93 864 22 19</p>
-  <p>📧 rassiazzi9218@gmail.com</p>
+
+  <a href="mailto:rassiazzi9218@gmail.com">📧 Email</a><br/>
+  <a href="tel:+998938642219">📞 Call</a>
 </section>
 
 <footer>
-  <p>Built by Rasulbek • 2026</p>
+  <p>✨ Built by Rasulbek • 2026</p>
 </footer>
 
 <script src="script.js"></script>

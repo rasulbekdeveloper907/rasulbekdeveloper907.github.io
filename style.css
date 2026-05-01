@@ -3,13 +3,18 @@ body {
   font-family: Arial;
   background: #0a0a0a;
   color: #e5e5e5;
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 15px 40px;
+  background: rgba(10,10,10,0.8);
+  backdrop-filter: blur(10px);
 }
 
 nav a {
@@ -22,61 +27,70 @@ nav a:hover {
   color: #00f2fe;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 50px;
-}
-
-.profile {
-  width: 180px;
-  height: 220px;
+/* SECTIONS */
+.section {
+  width: 80%;
+  margin: 60px auto;
+  padding: 30px;
   border-radius: 15px;
-  object-fit: cover;
-  border: 2px solid #00f2fe;
-}
-
-/* GRID */
-.main-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  width: 90%;
-  margin: auto;
-}
-
-/* CARDS */
-.card, .cv {
   background: rgba(255,255,255,0.03);
-  padding: 20px;
-  border-radius: 15px;
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* CV SIDE */
-.cv h2 {
+/* HERO */
+.hero {
+  text-align: center;
+}
+
+.profile {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid #00f2fe;
+}
+
+/* TEXT */
+h1 {
   color: #00f2fe;
 }
 
-.cv-block {
-  margin-bottom: 20px;
-}
-
-.cv-block h3 {
+h2 {
   color: #00f2fe;
-  margin-bottom: 5px;
 }
 
-ul {
-  padding-left: 20px;
-  color: #ccc;
+/* PROJECTS */
+.project {
+  margin: 15px 0;
+  padding: 10px;
+  border-left: 2px solid #00f2fe;
+}
+
+.project a {
+  color: #00f2fe;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  padding: 6px 12px;
+  border: 1px solid #00f2fe;
+  border-radius: 20px;
 }
 
 /* CONTACT */
-#contact {
-  width: 90%;
-  margin: 30px auto;
-  text-align: center;
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00f2fe;
 }
 
 /* FOOTER */
