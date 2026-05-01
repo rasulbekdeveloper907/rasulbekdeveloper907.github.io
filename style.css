@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #0a0a0a;
   color: #e5e5e5;
   scroll-behavior: smooth;
@@ -13,8 +13,14 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 15px 40px;
-  background: rgba(10,10,10,0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(10,10,10,0.9);
+  border-bottom: 1px solid #222;
+  z-index: 100;
+}
+
+.logo {
+  color: #00f2fe;
+  font-weight: bold;
 }
 
 nav a {
@@ -30,9 +36,9 @@ nav a:hover {
 /* SECTIONS */
 .section {
   width: 80%;
-  margin: 60px auto;
-  padding: 30px;
-  border-radius: 15px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 12px;
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.08);
 }
@@ -48,29 +54,51 @@ nav a:hover {
   object-fit: cover;
   border-radius: 15px;
   border: 2px solid #00f2fe;
+  margin-bottom: 15px;
 }
 
-/* TEXT */
+/* TITLES */
 h1 {
   color: #00f2fe;
+  margin: 10px 0;
 }
 
 h2 {
   color: #00f2fe;
 }
 
+/* LINKS */
+.links a {
+  margin: 0 10px;
+  color: #00f2fe;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
 /* PROJECTS */
 .project {
   margin: 15px 0;
   padding: 10px;
-  border-left: 2px solid #00f2fe;
+  border-left: 3px solid #00f2fe;
+}
+
+.project h3 {
+  margin-bottom: 5px;
+}
+
+.project p {
+  color: #aaa;
+  font-size: 14px;
 }
 
 .project a {
   color: #00f2fe;
 }
 
-/* TAGS */
+/* SKILLS */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -81,16 +109,17 @@ h2 {
   padding: 6px 12px;
   border: 1px solid #00f2fe;
   border-radius: 20px;
+  font-size: 13px;
 }
 
 /* CONTACT */
-a {
-  color: #aaa;
-  text-decoration: none;
+#contact p, #cv p {
+  color: #ccc;
 }
 
-a:hover {
+a {
   color: #00f2fe;
+  text-decoration: none;
 }
 
 /* FOOTER */
