@@ -8,19 +8,36 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Rasulbek | AI Portfolio</title>
+<title>Rasulbek | AI Engineer</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
 
+
+
+<!-- ===========================
+NAVBAR
+=========================== -->
+
 <header>
+
+<div class="container nav-container">
 
 <div class="logo">
 
@@ -30,29 +47,35 @@ content="width=device-width, initial-scale=1.0">
 
 <nav>
 
-<a href="#">Home</a>
+<a href="#home">Home</a>
 
-<a href="ml.html">Machine Learning</a>
+<a href="#about">About</a>
 
-<a href="dl.html">Deep Learning</a>
+<a href="#skills">Skills</a>
 
-<a href="cv.html">Computer Vision</a>
+<a href="#projects">Projects</a>
 
 <a href="#contact">Contact</a>
 
 </nav>
 
-</header>
-
-<section class="hero">
-
-<div class="hero-left">
-
-<img src="assets/profile.jpg" class="profile">
-
 </div>
 
-<div class="hero-right">
+</header>
+
+
+
+<!-- ===========================
+HERO
+=========================== -->
+
+<section id="home" class="hero">
+
+<div class="container">
+
+<img
+src="assets/profile.jpg"
+class="profile">
 
 <h1>
 
@@ -60,37 +83,55 @@ Ro'zmetov Rasulbek
 
 </h1>
 
-<h2>
+<h2 class="typing">
 
 Machine Learning Engineer
 
 </h2>
 
-<p>
+<p class="hero-text">
 
-Building intelligent AI systems using Machine Learning,
+Passionate AI Engineer specializing in
 
-Deep Learning, Computer Vision and MLOps.
+Machine Learning,
+
+Deep Learning,
+
+Computer Vision,
+
+FastAPI,
+
+Docker,
+
+Cloud Deployment,
+
+and MLOps.
+
+I build intelligent production-ready AI systems.
 
 </p>
+
+
 
 <div class="hero-buttons">
 
-<a href="ml.html">
+<a
+href="#projects"
+class="btn">
 
-Machine Learning
-
-</a>
-
-<a href="dl.html">
-
-Deep Learning
+View Projects
 
 </a>
 
-<a href="cv.html">
+<a
 
-Computer Vision
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907"
+
+class="btn-outline">
+
+GitHub
 
 </a>
 
@@ -99,140 +140,118 @@ Computer Vision
 </div>
 
 </section>
+
+
+
+<!-- ===========================
+ABOUT
+=========================== -->
+
+<section
+id="about">
+
+<div class="container">
+
+<h2>
+
+About Me
+
+</h2>
+
+<p>
+
+AI / Machine Learning Engineer with experience in
+Machine Learning,
+Deep Learning,
+Computer Vision,
+NLP,
+FastAPI,
+Docker,
+AWS,
+Git,
+SQL
+and modern AI technologies.
+
+I enjoy transforming research into
+real-world production applications.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===========================
+STATISTICS
+=========================== -->
 
 <section class="stats">
 
-<div>
-
-<h2>30+</h2>
-
-<p>Projects</p>
-
-</div>
+<div class="container stats-grid">
 
 <div>
-
-<h2>3+</h2>
-
-<p>Years Learning AI</p>
-
-</div>
-
-<div>
-
-<h2>100%</h2>
-
-<p>Passion</p>
-
-</div>
-
-</section>
-
-<section class="cards">
-
-<h1>
-
-AI Domains
-
-</h1>
-
-<div class="card-grid">
-
-<div class="card">
 
 <h2>
 
-🤖 Machine Learning
+30+
 
 </h2>
 
 <p>
 
-Regression
+Projects
 
-Classification
+</p>
 
-Clustering
+</div>
 
-Deployment
+<div>
+
+<h2>
+
+100%
+
+</h2>
+
+<p>
+
+AI Focus
+
+</p>
+
+</div>
+
+<div>
+
+<h2>
 
 FastAPI
 
+</h2>
+
+<p>
+
+Deployment
+
+</p>
+
+</div>
+
+<div>
+
+<h2>
+
 Docker
 
-AWS
-
-</p>
-
-<a href="ml.html">
-
-Explore →
-
-</a>
-
-</div>
-
-<div class="card">
-
-<h2>
-
-🧠 Deep Learning
-
 </h2>
 
 <p>
 
-CNN
-
-TensorFlow
-
-PyTorch
-
-Transfer Learning
-
-Video AI
-
-Image AI
+Production
 
 </p>
-
-<a href="dl.html">
-
-Explore →
-
-</a>
-
-</div>
-
-<div class="card">
-
-<h2>
-
-👁 Computer Vision
-
-</h2>
-
-<p>
-
-YOLO
-
-OCR
-
-Segmentation
-
-OpenCV
-
-Detection
-
-Tracking
-
-</p>
-
-<a href="cv.html">
-
-Explore →
-
-</a>
 
 </div>
 
@@ -240,17 +259,662 @@ Explore →
 
 </section>
 
-<section id="contact">
 
-<h1>
 
-Contact
+<!-- ===========================
+SKILLS
+=========================== -->
 
-</h1>
+<section id="skills">
+
+<div class="container">
+
+<h2>
+
+Technical Skills
+
+</h2>
+
+<div class="skills-grid">
+
+<div>🐍 Python</div>
+
+<div>📊 Pandas</div>
+
+<div>📈 NumPy</div>
+
+<div>🤖 Scikit-Learn</div>
+
+<div>🧠 PyTorch</div>
+
+<div>⚡ TensorFlow</div>
+
+<div>👁 OpenCV</div>
+
+<div>📚 NLP</div>
+
+<div>🚀 FastAPI</div>
+
+<div>🐳 Docker</div>
+
+<div>☁ AWS</div>
+
+<div>💾 SQL</div>
+
+<div>📂 Git</div>
+
+<div>🐧 Linux</div>
+
+<div>🔄 MLOps</div>
+
+<div>🌐 REST API</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+PROJECTS
+========================================== -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+
+🚀 My AI Portfolio
+
+</h2>
+
+<p class="section-subtitle">
+
+Choose a category to explore my projects
+
+</p>
+
+
+<div class="project-tabs">
+
+<button
+class="tab-btn active"
+onclick="showCategory('ml')">
+
+🤖 Machine Learning
+
+</button>
+
+
+<button
+class="tab-btn"
+onclick="showCategory('dl')">
+
+🧠 Deep Learning
+
+</button>
+
+
+<button
+class="tab-btn"
+onclick="showCategory('cv')">
+
+👁 Computer Vision
+
+</button>
+
+</div>
+
+
+<div id="ml" class="project-category active-category">
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<img
+src="assets/cars_prediction.png"
+alt="Cars Kilometer Prediction">
+
+<div class="project-content">
+
+<h3>
+
+🚗 Cars Kilometer Prediction
+
+</h3>
 
 <p>
 
-📧
+Regression project predicting car mileage
+using Machine Learning.
+
+</p>
+
+<div class="stack">
+
+<span>Python</span>
+
+<span>Pandas</span>
+
+<span>Scikit-Learn</span>
+
+<span>XGBoost</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/Cars-Kilometer-Prediction-"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<img
+src="assets/hotel_booking.png">
+
+<div class="project-content">
+
+<h3>
+
+🏨 Hotel Booking Cancellation
+
+</h3>
+
+<p>
+
+Classification model predicting hotel
+booking cancellations.
+
+</p>
+
+<div class="stack">
+
+<span>Python</span>
+
+<span>FastAPI</span>
+
+<span>Docker</span>
+
+<span>AWS</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/Hotel-Booking-Cancellation-Prediction"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img
+src="assets/youtube_prediction.png">
+
+<div class="project-content">
+
+<h3>
+
+🎥 YouTube Video Categorization
+
+</h3>
+
+<p>
+
+Natural Language Processing project
+categorizing YouTube videos.
+
+</p>
+
+<div class="stack">
+
+<span>NLP</span>
+
+<span>TF-IDF</span>
+
+<span>Python</span>
+
+<span>FastAPI</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/Yo_Tu_VidCat_Pred"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img
+src="assets/ml_portfolio.png">
+
+<div class="project-content">
+
+<h3>
+
+⭐ Machine Learning Portfolio
+
+</h3>
+
+<p>
+
+Production-ready Machine Learning
+projects with deployment.
+
+</p>
+
+<div class="stack">
+
+<span>ML</span>
+
+<span>Docker</span>
+
+<span>AWS</span>
+
+<span>FastAPI</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907"
+
+class="project-btn">
+
+GitHub Profile
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ==========================================
+DEEP LEARNING
+========================================== -->
+
+<div id="dl" class="project-category">
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<img
+src="assets/dl_video.png"
+alt="DL Video">
+
+<div class="project-content">
+
+<h3>
+
+🎬 Deep Learning Video Project
+
+</h3>
+
+<p>
+
+Video classification and understanding
+using Deep Learning.
+
+</p>
+
+<div class="stack">
+
+<span>Python</span>
+
+<span>PyTorch</span>
+
+<span>OpenCV</span>
+
+<span>CNN</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/DL_Video_Project"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="project-card">
+
+<img
+src="assets/dl_image.png"
+alt="DL Image">
+
+<div class="project-content">
+
+<h3>
+
+🖼️ Deep Learning Image Project
+
+</h3>
+
+<p>
+
+Image Classification using CNN,
+Transfer Learning and PyTorch.
+
+</p>
+
+<div class="stack">
+
+<span>TensorFlow</span>
+
+<span>PyTorch</span>
+
+<span>CNN</span>
+
+<span>Transfer Learning</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/DL_Image_Project"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ==========================================
+COMPUTER VISION
+========================================== -->
+
+<div id="cv" class="project-category">
+
+<div class="project-grid">
+
+
+<div class="project-card">
+
+<img
+src="assets/semantic_segmentation.png">
+
+<div class="project-content">
+
+<h3>
+
+🧩 Semantic Segmentation
+
+</h3>
+
+<p>
+
+Semantic segmentation using
+PyTorch and UNet.
+
+</p>
+
+<div class="stack">
+
+<span>PyTorch</span>
+
+<span>UNet</span>
+
+<span>OpenCV</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/CV_Semantic_Segmentation"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img
+src="assets/receipt_ocr.png">
+
+<div class="project-content">
+
+<h3>
+
+🧾 Receipt OCR
+
+</h3>
+
+<p>
+
+OCR project for receipt
+information extraction.
+
+</p>
+
+<div class="stack">
+
+<span>OCR</span>
+
+<span>OpenCV</span>
+
+<span>EasyOCR</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/Receipt_OCR_Project"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img
+src="assets/ship_truck.png">
+
+<div class="project-content">
+
+<h3>
+
+🚢 Ship & Truck Detection
+
+</h3>
+
+<p>
+
+YOLO based object detection
+project.
+
+</p>
+
+<div class="stack">
+
+<span>YOLO</span>
+
+<span>PyTorch</span>
+
+<span>OpenCV</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/Ship_Truck_Computer_Vision_Project"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<img
+src="assets/cv_segmentation.png">
+
+<div class="project-content">
+
+<h3>
+
+🎯 CV Segmentation Project
+
+</h3>
+
+<p>
+
+Pixel-level image segmentation
+using Deep Learning.
+
+</p>
+
+<div class="stack">
+
+<span>Segmentation</span>
+
+<span>PyTorch</span>
+
+<span>OpenCV</span>
+
+</div>
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907/CV_Segmentation_Project"
+
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================
+CONTACT
+========================================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+
+📬 Contact Me
+
+</h2>
+
+<p class="section-subtitle">
+
+Let's build amazing AI solutions together.
+
+</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>
 
 <a href="mailto:rassiazzi9218@gmail.com">
 
@@ -260,33 +924,104 @@ rassiazzi9218@gmail.com
 
 </p>
 
-<p>
+</div>
 
-🐙
+<div class="contact-card">
 
-<a href="https://github.com/rasulbekdeveloper907">
+<i class="fa-solid fa-phone"></i>
 
-GitHub
-
-</a>
-
-</p>
+<h3>Phone</h3>
 
 <p>
-
-📱
 
 +998 50 730 92 92
 
 </p>
 
+</div>
+
+<div class="contact-card">
+
+<i class="fa-brands fa-github"></i>
+
+<h3>GitHub</h3>
+
+<p>
+
+<a
+target="_blank"
+href="https://github.com/rasulbekdeveloper907">
+
+github.com/rasulbekdeveloper907
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- ==========================================
+FOOTER
+========================================== -->
 
 <footer>
 
-© 2026 Rasulbek
+<div class="container">
 
-Machine Learning Engineer
+<h2>
+
+🚀 Rasulbek.dev
+
+</h2>
+
+<p>
+
+AI • Machine Learning • Deep Learning • Computer Vision
+
+</p>
+
+<div class="footer-social">
+
+<a
+
+target="_blank"
+
+href="https://github.com/rasulbekdeveloper907">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-linkedin"></i>
+
+</a>
+
+<a href="mailto:rassiazzi9218@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Rasulbek.
+All Rights Reserved.
+
+</p>
+
+</div>
 
 </footer>
 
@@ -295,3 +1030,6 @@ Machine Learning Engineer
 </body>
 
 </html>
+
+
+
