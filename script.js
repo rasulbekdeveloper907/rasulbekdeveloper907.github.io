@@ -1,126 +1,154 @@
-/* =====================================================
-   AI Portfolio 2026
-   Author : Rasulbek
-===================================================== */
+/* ==========================================
+   AI Portfolio
+   Rasulbek 2026
+========================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    /* ===========================================
+    /* ==========================
        Typing Effect
-    =========================================== */
+    ========================== */
 
-    const typingElement = document.querySelector(".typing");
+    const typing = document.querySelector(".typing");
 
     const words = [
+
         "Machine Learning Engineer",
-        "Deep Learning Developer",
+
+        "Deep Learning Engineer",
+
         "Computer Vision Engineer",
-        "MLOps Enthusiast",
-        "FastAPI Developer"
+
+        "AI Engineer",
+
+        "MLOps Enthusiast"
+
     ];
 
-    if (typingElement) {
+    let wordIndex = 0;
 
-        let wordIndex = 0;
-        let charIndex = 0;
-        let deleting = false;
+    let charIndex = 0;
 
-        function type() {
+    let deleting = false;
 
-            const currentWord = words[wordIndex];
+    function typeEffect() {
 
-            if (!deleting) {
+        if (!typing) return;
 
-                typingElement.textContent =
-                    currentWord.substring(0, charIndex++);
+        const current = words[wordIndex];
 
-                if (charIndex > currentWord.length) {
+        if (!deleting) {
 
-                    deleting = true;
+            typing.textContent =
+                current.substring(0, charIndex++);
 
-                    setTimeout(type, 1500);
+            if (charIndex > current.length) {
 
-                    return;
-                }
+                deleting = true;
 
-            } else {
+                setTimeout(typeEffect, 1600);
 
-                typingElement.textContent =
-                    currentWord.substring(0, charIndex--);
-
-                if (charIndex < 0) {
-
-                    deleting = false;
-
-                    wordIndex++;
-
-                    if (wordIndex >= words.length)
-                        wordIndex = 0;
-
-                }
+                return;
 
             }
 
-            setTimeout(type, deleting ? 40 : 90);
+        }
+
+        else {
+
+            typing.textContent =
+                current.substring(0, charIndex--);
+
+            if (charIndex < 0) {
+
+                deleting = false;
+
+                wordIndex++;
+
+                if (wordIndex >= words.length)
+                    wordIndex = 0;
+
+            }
 
         }
 
-        type();
+        setTimeout(typeEffect, deleting ? 40 : 80);
 
     }
+
+    typeEffect();
 
 });
 
 
-/* ===========================================
+/* ==========================
 Reveal Animation
-=========================================== */
+========================== */
 
-const revealElements = document.querySelectorAll(
+const cards = document.querySelectorAll(
 
-".card,.project,.stats div"
+".project-card,.contact-card,.skills-grid div,.stats-grid div"
 
 );
 
-function reveal(){
+function revealCards(){
 
-    revealElements.forEach(item=>{
+cards.forEach(card=>{
 
-        const top=item.getBoundingClientRect().top;
+const top=card.getBoundingClientRect().top;
 
-        if(top<window.innerHeight-120){
+if(top<window.innerHeight-100){
 
-            item.classList.add("show");
+card.style.opacity="1";
 
-        }
-
-    });
+card.style.transform="translateY(0)";
 
 }
 
-window.addEventListener("scroll",reveal);
+});
 
-reveal();
+}
 
-/* ===========================================
-Navbar
-=========================================== */
+window.addEventListener("scroll",revealCards);
+
+revealCards();
+
+
+/* ==========================
+Navbar Active
+========================== */
+
+const navLinks=document.querySelectorAll("nav a");
+
+navLinks.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navLinks.forEach(item=>item.classList.remove("active"));
+
+link.classList.add("active");
+
+});
+
+});
+
+/* ==========================
+Navbar Shadow
+========================== */
 
 const header=document.querySelector("header");
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>40){
+if(window.scrollY>80){
 
-header.style.background="rgba(0,0,0,.8)";
+header.style.boxShadow=
 
-header.style.boxShadow="0 10px 30px rgba(0,0,0,.4)";
+"0 10px 30px rgba(0,0,0,.35)";
 
 }
 
 else{
-
-header.style.background="rgba(0,0,0,.35)";
 
 header.style.boxShadow="none";
 
@@ -128,39 +156,21 @@ header.style.boxShadow="none";
 
 });
 
-/* ===========================================
-Active Navigation
-=========================================== */
-
-const links=document.querySelectorAll("nav a");
-
-links.forEach(link=>{
-
-if(link.href===window.location.href){
-
-link.style.color="#00e6ff";
-
-link.style.fontWeight="700";
-
-}
-
-});
-
-/* ===========================================
+/* ==========================
 Top Button
-=========================================== */
+========================== */
 
 const topBtn=document.createElement("button");
 
-topBtn.innerHTML="↑";
+topBtn.innerHTML="⬆";
+
+topBtn.classList.add("top-button");
 
 document.body.appendChild(topBtn);
 
-topBtn.classList.add("top-btn");
-
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>500){
+if(window.scrollY>600){
 
 topBtn.style.display="block";
 
@@ -186,9 +196,41 @@ behavior:"smooth"
 
 };
 
-/* ===========================================
-GitHub API
-=========================================== */
+/* ==========================
+Projects Tabs
+========================== */
+
+function showCategory(category){
+
+const sections=document.querySelectorAll(".project-category");
+
+sections.forEach(sec=>{
+
+sec.classList.remove("active-category");
+
+});
+
+document
+.getElementById(category)
+.classList.add("active-category");
+
+
+const buttons=document.querySelectorAll(".tab-btn");
+
+buttons.forEach(btn=>{
+
+btn.classList.remove("active");
+
+});
+
+event.target.classList.add("active");
+
+}
+
+
+/* ==========================
+GitHub
+========================== */
 
 fetch("https://api.github.com/users/rasulbekdeveloper907")
 
@@ -198,16 +240,70 @@ fetch("https://api.github.com/users/rasulbekdeveloper907")
 
 console.log(
 
-"GitHub:",
+"Repositories:",
 
-data.login,
+data.public_repos
 
-data.public_repos,
+);
+
+console.log(
+
+"Followers:",
 
 data.followers
 
 );
 
 });
+
+
+.top-button{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:#5be7ff;
+
+color:#000;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+transition:.3s;
+
+box-shadow:0 0 25px rgba(91,231,255,.45);
+
+z-index:999;
+
+}
+
+.top-button:hover{
+
+transform:scale(1.1);
+
+}
+
+.active{
+
+background:#5be7ff !important;
+
+color:#000 !important;
+
+}
+
 
 
