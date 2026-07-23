@@ -1,52 +1,46 @@
-/* ==========================================
-   AI Portfolio
-   Rasulbek 2026
-========================================== */
+/* ===================================================
+   AI PORTFOLIO
+   Author : Rasulbek
+=================================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    /* ==========================
-       Typing Effect
-    ========================== */
+    /* =====================================
+       Typing Animation
+    ===================================== */
 
     const typing = document.querySelector(".typing");
 
     const words = [
-
         "Machine Learning Engineer",
-
         "Deep Learning Engineer",
-
         "Computer Vision Engineer",
-
         "AI Engineer",
-
-        "MLOps Enthusiast"
-
+        "FastAPI Developer",
+        "MLOps Engineer"
     ];
 
-    let wordIndex = 0;
-
-    let charIndex = 0;
-
+    let word = 0;
+    let letter = 0;
     let deleting = false;
 
-    function typeEffect() {
+    function typeWriter() {
 
         if (!typing) return;
 
-        const current = words[wordIndex];
+        const current = words[word];
 
         if (!deleting) {
 
-            typing.textContent =
-                current.substring(0, charIndex++);
+            typing.textContent = current.substring(0, letter);
 
-            if (charIndex > current.length) {
+            letter++;
+
+            if (letter > current.length) {
 
                 deleting = true;
 
-                setTimeout(typeEffect, 1600);
+                setTimeout(typeWriter, 1500);
 
                 return;
 
@@ -56,254 +50,301 @@ document.addEventListener("DOMContentLoaded", function () {
 
         else {
 
-            typing.textContent =
-                current.substring(0, charIndex--);
+            typing.textContent = current.substring(0, letter);
 
-            if (charIndex < 0) {
+            letter--;
+
+            if (letter < 0) {
 
                 deleting = false;
 
-                wordIndex++;
+                word++;
 
-                if (wordIndex >= words.length)
-                    wordIndex = 0;
+                if (word >= words.length)
+                    word = 0;
 
             }
 
         }
 
-        setTimeout(typeEffect, deleting ? 40 : 80);
+        setTimeout(typeWriter, deleting ? 45 : 85);
 
     }
 
-    typeEffect();
+    typeWriter();
+
+
+
+
+    /* =====================================
+       Navbar Shadow
+    ===================================== */
+
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 80) {
+
+            header.style.boxShadow =
+                "0 10px 40px rgba(0,0,0,.35)";
+
+        }
+
+        else {
+
+            header.style.boxShadow = "none";
+
+        }
+
+    });
+
+
+
+
+    /* =====================================
+       Reveal Animation
+    ===================================== */
+
+    const reveals = document.querySelectorAll(
+
+        ".project-card,.contact-card,.skills-grid div,.stats-grid div"
+
+    );
+
+    reveals.forEach(el => {
+
+        el.style.opacity = "0";
+
+        el.style.transform = "translateY(50px)";
+
+        el.style.transition = ".7s";
+
+    });
+
+    function revealAnimation() {
+
+        reveals.forEach(el => {
+
+            const top = el.getBoundingClientRect().top;
+
+            if (top < window.innerHeight - 100) {
+
+                el.style.opacity = "1";
+
+                el.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    }
+
+    revealAnimation();
+
+    window.addEventListener("scroll", revealAnimation);
+
+
+
+
+    /* =====================================
+       Active Navbar
+    ===================================== */
+
+    const links = document.querySelectorAll("nav a");
+
+    links.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            links.forEach(item => {
+
+                item.classList.remove("active");
+
+            });
+
+            link.classList.add("active");
+
+        });
+
+    });
+
+
+
+
+    /* =====================================
+       Scroll To Top Button
+    ===================================== */
+
+    const topButton = document.createElement("button");
+
+    topButton.innerHTML = "↑";
+
+    topButton.className = "top-button";
+
+    document.body.appendChild(topButton);
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+
+            topButton.style.display = "flex";
+
+        }
+
+        else {
+
+            topButton.style.display = "none";
+
+        }
+
+    });
+
+    topButton.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
 
 });
 
 
-/* ==========================
-Reveal Animation
-========================== */
+/* =====================================
+   ML / DL / CV Tabs
+===================================== */
 
-const cards = document.querySelectorAll(
+function showCategory(category) {
 
-".project-card,.contact-card,.skills-grid div,.stats-grid div"
+    // Barcha kategoriyalarni yashirish
+    const categories = document.querySelectorAll(".project-category");
 
-);
+    categories.forEach(item => {
 
-function revealCards(){
+        item.classList.remove("active-category");
 
-cards.forEach(card=>{
+    });
 
-const top=card.getBoundingClientRect().top;
+    // Tanlangan kategoriyani ko'rsatish
+    const active = document.getElementById(category);
 
-if(top<window.innerHeight-100){
+    if (active) {
 
-card.style.opacity="1";
+        active.classList.add("active-category");
 
-card.style.transform="translateY(0)";
+    }
+
+    // Tugmalar active holatini o'zgartirish
+    const buttons = document.querySelectorAll(".tab-btn");
+
+    buttons.forEach(btn => {
+
+        btn.classList.remove("active");
+
+        const text = btn.textContent.toLowerCase();
+
+        if (
+            (category === "ml" && text.includes("machine")) ||
+            (category === "dl" && text.includes("deep")) ||
+            (category === "cv" && text.includes("computer"))
+        ) {
+
+            btn.classList.add("active");
+
+        }
+
+    });
 
 }
 
-});
 
-}
-
-window.addEventListener("scroll",revealCards);
-
-revealCards();
-
-
-/* ==========================
-Navbar Active
-========================== */
-
-const navLinks=document.querySelectorAll("nav a");
-
-navLinks.forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-navLinks.forEach(item=>item.classList.remove("active"));
-
-link.classList.add("active");
-
-});
-
-});
-
-/* ==========================
-Navbar Shadow
-========================== */
-
-const header=document.querySelector("header");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>80){
-
-header.style.boxShadow=
-
-"0 10px 30px rgba(0,0,0,.35)";
-
-}
-
-else{
-
-header.style.boxShadow="none";
-
-}
-
-});
-
-/* ==========================
-Top Button
-========================== */
-
-const topBtn=document.createElement("button");
-
-topBtn.innerHTML="⬆";
-
-topBtn.classList.add("top-button");
-
-document.body.appendChild(topBtn);
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>600){
-
-topBtn.style.display="block";
-
-}
-
-else{
-
-topBtn.style.display="none";
-
-}
-
-});
-
-topBtn.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-
-/* ==========================
-Projects Tabs
-========================== */
-
-function showCategory(category){
-
-const sections=document.querySelectorAll(".project-category");
-
-sections.forEach(sec=>{
-
-sec.classList.remove("active-category");
-
-});
-
-document
-.getElementById(category)
-.classList.add("active-category");
-
-
-const buttons=document.querySelectorAll(".tab-btn");
-
-buttons.forEach(btn=>{
-
-btn.classList.remove("active");
-
-});
-
-event.target.classList.add("active");
-
-}
-
-
-/* ==========================
-GitHub
-========================== */
+/* =====================================
+   GitHub API
+===================================== */
 
 fetch("https://api.github.com/users/rasulbekdeveloper907")
+.then(response => response.json())
+.then(data => {
 
-.then(res=>res.json())
+    console.log("GitHub User:", data.login);
+    console.log("Repositories:", data.public_repos);
+    console.log("Followers:", data.followers);
 
-.then(data=>{
+})
+.catch(error => {
 
-console.log(
-
-"Repositories:",
-
-data.public_repos
-
-);
-
-console.log(
-
-"Followers:",
-
-data.followers
-
-);
+    console.log(error);
 
 });
 
 
-.top-button{
+/* =====================================
+   Project Card Hover Effect
+===================================== */
 
-position:fixed;
+const cards = document.querySelectorAll(".project-card");
 
-right:30px;
+cards.forEach(card => {
 
-bottom:30px;
+    card.addEventListener("mouseenter", () => {
 
-width:60px;
+        card.style.transform = "translateY(-12px) scale(1.02)";
 
-height:60px;
+    });
 
-border:none;
+    card.addEventListener("mouseleave", () => {
 
-border-radius:50%;
+        card.style.transform = "translateY(0px) scale(1)";
 
-background:#5be7ff;
+    });
 
-color:#000;
-
-font-size:22px;
-
-cursor:pointer;
-
-display:none;
-
-transition:.3s;
-
-box-shadow:0 0 25px rgba(91,231,255,.45);
-
-z-index:999;
-
-}
-
-.top-button:hover{
-
-transform:scale(1.1);
-
-}
-
-.active{
-
-background:#5be7ff !important;
-
-color:#000 !important;
-
-}
+});
 
 
+/* =====================================
+   Smooth Scroll
+===================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+
+/* =====================================
+   Console Message
+===================================== */
+
+console.log("🚀 Rasulbek Portfolio Loaded Successfully");
+
+
+console.log("🤖 Machine Learning Ready");
+
+
+console.log("🧠 Deep Learning Ready");
+
+
+console.log("👁 Computer Vision Ready");
 
