@@ -1,260 +1,112 @@
-/* ===================================================
-   AI PORTFOLIO
-   Author : Rasulbek
-=================================================== */
+/* ======================================================
+   AI Portfolio
+   Rasulbek 2026
+====================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    /* =====================================
-       Typing Animation
-    ===================================== */
+/* ======================================================
+   Typing Animation
+====================================================== */
 
-    const typing = document.querySelector(".typing");
+const typingElement = document.querySelector(".typing");
 
-    const words = [
-        "Machine Learning Engineer",
-        "Deep Learning Engineer",
-        "Computer Vision Engineer",
-        "AI Engineer",
-        "FastAPI Developer",
-        "MLOps Engineer"
-    ];
+const words = [
 
-    let word = 0;
-    let letter = 0;
-    let deleting = false;
+    "Machine Learning Engineer",
 
-    function typeWriter() {
+    "Deep Learning Engineer",
 
-        if (!typing) return;
+    "Computer Vision Engineer",
 
-        const current = words[word];
+    "AI Engineer",
 
-        if (!deleting) {
+    "Python Developer"
 
-            typing.textContent = current.substring(0, letter);
+];
 
-            letter++;
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-            if (letter > current.length) {
+function typingEffect(){
 
-                deleting = true;
+    if(!typingElement) return;
 
-                setTimeout(typeWriter, 1500);
+    const currentWord = words[wordIndex];
 
-                return;
+    if(!deleting){
 
-            }
+        typingElement.textContent =
+        currentWord.substring(0,charIndex);
 
-        }
+        charIndex++;
 
-        else {
+        if(charIndex > currentWord.length){
 
-            typing.textContent = current.substring(0, letter);
+            deleting = true;
 
-            letter--;
+            setTimeout(typingEffect,1500);
 
-            if (letter < 0) {
-
-                deleting = false;
-
-                word++;
-
-                if (word >= words.length)
-                    word = 0;
-
-            }
+            return;
 
         }
-
-        setTimeout(typeWriter, deleting ? 45 : 85);
 
     }
 
-    typeWriter();
+    else{
 
+        typingElement.textContent =
+        currentWord.substring(0,charIndex);
 
+        charIndex--;
 
+        if(charIndex < 0){
 
-    /* =====================================
-       Navbar Shadow
-    ===================================== */
+            deleting = false;
 
-    const header = document.querySelector("header");
+            wordIndex++;
 
-    window.addEventListener("scroll", () => {
+            if(wordIndex >= words.length){
 
-        if (window.scrollY > 80) {
+                wordIndex = 0;
 
-            header.style.boxShadow =
-                "0 10px 40px rgba(0,0,0,.35)";
-
-        }
-
-        else {
-
-            header.style.boxShadow = "none";
+            }
 
         }
 
-    });
+    }
 
-
-
-
-    /* =====================================
-       Reveal Animation
-    ===================================== */
-
-    const reveals = document.querySelectorAll(
-
-        ".project-card,.contact-card,.skills-grid div,.stats-grid div"
-
+    setTimeout(
+        typingEffect,
+        deleting ? 45 : 80
     );
 
-    reveals.forEach(el => {
+}
 
-        el.style.opacity = "0";
+typingEffect();
 
-        el.style.transform = "translateY(50px)";
 
-        el.style.transition = ".7s";
+/* ======================================================
+   Scroll Reveal
+====================================================== */
 
-    });
+const revealItems = document.querySelectorAll(
 
-    function revealAnimation() {
+".about-card,.project-card,.contact-card,.stats-grid div,.skills-grid div"
 
-        reveals.forEach(el => {
+);
 
-            const top = el.getBoundingClientRect().top;
+function revealOnScroll(){
 
-            if (top < window.innerHeight - 100) {
+    revealItems.forEach(item=>{
 
-                el.style.opacity = "1";
+        const top = item.getBoundingClientRect().top;
 
-                el.style.transform = "translateY(0)";
+        if(top < window.innerHeight-80){
 
-            }
+            item.style.opacity="1";
 
-        });
-
-    }
-
-    revealAnimation();
-
-    window.addEventListener("scroll", revealAnimation);
-
-
-
-
-    /* =====================================
-       Active Navbar
-    ===================================== */
-
-    const links = document.querySelectorAll("nav a");
-
-    links.forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            links.forEach(item => {
-
-                item.classList.remove("active");
-
-            });
-
-            link.classList.add("active");
-
-        });
-
-    });
-
-
-
-
-    /* =====================================
-       Scroll To Top Button
-    ===================================== */
-
-    const topButton = document.createElement("button");
-
-    topButton.innerHTML = "↑";
-
-    topButton.className = "top-button";
-
-    document.body.appendChild(topButton);
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 500) {
-
-            topButton.style.display = "flex";
-
-        }
-
-        else {
-
-            topButton.style.display = "none";
-
-        }
-
-    });
-
-    topButton.addEventListener("click", () => {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    });
-
-});
-
-
-/* =====================================
-   ML / DL / CV Tabs
-===================================== */
-
-function showCategory(category) {
-
-    // Barcha kategoriyalarni yashirish
-    const categories = document.querySelectorAll(".project-category");
-
-    categories.forEach(item => {
-
-        item.classList.remove("active-category");
-
-    });
-
-    // Tanlangan kategoriyani ko'rsatish
-    const active = document.getElementById(category);
-
-    if (active) {
-
-        active.classList.add("active-category");
-
-    }
-
-    // Tugmalar active holatini o'zgartirish
-    const buttons = document.querySelectorAll(".tab-btn");
-
-    buttons.forEach(btn => {
-
-        btn.classList.remove("active");
-
-        const text = btn.textContent.toLowerCase();
-
-        if (
-            (category === "ml" && text.includes("machine")) ||
-            (category === "dl" && text.includes("deep")) ||
-            (category === "cv" && text.includes("computer"))
-        ) {
-
-            btn.classList.add("active");
+            item.style.transform="translateY(0)";
 
         }
 
@@ -262,89 +114,196 @@ function showCategory(category) {
 
 }
 
+window.addEventListener(
 
-/* =====================================
-   GitHub API
-===================================== */
+"scroll",
+
+revealOnScroll
+
+);
+
+revealOnScroll();
+
+/* ======================================================
+   Navbar Shadow
+====================================================== */
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 80){
+
+        header.style.boxShadow =
+        "0 10px 30px rgba(0,0,0,.35)";
+
+    }
+
+    else{
+
+        header.style.boxShadow = "none";
+
+    }
+
+});
+
+/* ======================================================
+   Back To Top
+====================================================== */
+
+const topButton = document.createElement("button");
+
+topButton.innerHTML="⬆";
+
+topButton.classList.add("top-button");
+
+document.body.appendChild(topButton);
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>500){
+
+        topButton.style.display="block";
+
+    }
+
+    else{
+
+        topButton.style.display="none";
+
+    }
+
+});
+
+topButton.onclick=()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+};
+
+/* ======================================================
+   PROJECT TABS
+====================================================== */
+
+function showCategory(category){
+
+    // Barcha bo'limlarni yashirish
+    const sections = document.querySelectorAll(".project-category");
+
+    sections.forEach(section => {
+
+        section.classList.remove("active-category");
+
+    });
+
+    // Tanlangan bo'limni ko'rsatish
+    const selected = document.getElementById(category);
+
+    if(selected){
+
+        selected.classList.add("active-category");
+
+    }
+
+    // Tugmalar holatini yangilash
+    const buttons = document.querySelectorAll(".tab-btn");
+
+    buttons.forEach(button=>{
+
+        button.classList.remove("active");
+
+    });
+
+    // Bosilgan tugmani active qilish
+    const clickedButton = document.querySelector(
+        `.tab-btn[onclick="showCategory('${category}')"]`
+    );
+
+    if(clickedButton){
+
+        clickedButton.classList.add("active");
+
+    }
+
+}
+
+/* ======================================================
+   GITHUB API
+====================================================== */
 
 fetch("https://api.github.com/users/rasulbekdeveloper907")
+
 .then(response => response.json())
+
 .then(data => {
 
-    console.log("GitHub User:", data.login);
-    console.log("Repositories:", data.public_repos);
-    console.log("Followers:", data.followers);
+    console.log("GitHub Profile");
 
-})
-.catch(error => {
+    console.log("Username :", data.login);
 
-    console.log(error);
+    console.log("Repositories :", data.public_repos);
 
-});
-
-
-/* =====================================
-   Project Card Hover Effect
-===================================== */
-
-const cards = document.querySelectorAll(".project-card");
-
-cards.forEach(card => {
-
-    card.addEventListener("mouseenter", () => {
-
-        card.style.transform = "translateY(-12px) scale(1.02)";
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-        card.style.transform = "translateY(0px) scale(1)";
-
-    });
+    console.log("Followers :", data.followers);
 
 });
 
+/* ======================================================
+   ACTIVE NAVBAR
+====================================================== */
 
-/* =====================================
-   Smooth Scroll
-===================================== */
+const navLinks = document.querySelectorAll("nav a");
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+navLinks.forEach(link=>{
 
-    anchor.addEventListener("click", function(e) {
+    link.addEventListener("click",function(){
 
-        e.preventDefault();
+        navLinks.forEach(item=>{
 
-        const target = document.querySelector(this.getAttribute("href"));
+            item.classList.remove("active");
 
-        if(target){
+        });
 
-            target.scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
-        }
+        this.classList.add("active");
 
     });
 
 });
 
+/* ======================================================
+   INITIAL CARD STATE
+====================================================== */
 
-/* =====================================
-   Console Message
-===================================== */
+const animatedCards = document.querySelectorAll(
 
-console.log("🚀 Rasulbek Portfolio Loaded Successfully");
+".about-card,.project-card,.contact-card,.stats-grid div,.skills-grid div"
 
+);
 
-console.log("🤖 Machine Learning Ready");
+animatedCards.forEach(card=>{
 
+    card.style.opacity="0";
 
-console.log("🧠 Deep Learning Ready");
+    card.style.transform="translateY(30px)";
 
+    card.style.transition="all .6s ease";
 
-console.log("👁 Computer Vision Ready");
+});
+
+revealOnScroll();
+
+/* ======================================================
+   PAGE LOADED
+====================================================== */
+
+window.addEventListener("load",()=>{
+
+    console.log("🚀 Rasulbek Portfolio Loaded Successfully");
+
+});
 
