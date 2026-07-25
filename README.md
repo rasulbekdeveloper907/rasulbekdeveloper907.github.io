@@ -1,45 +1,55 @@
-console.log("Portfolio loaded 🚀");
+# 🤖 Rasulbek Ruzmetov — AI Engineer Portfolio
 
-// ===================
-// ⌨️ TYPING EFFECT
-// ===================
-const text = "AI Engineer";
-let i = 0;
+<p align="center">
 
-function type(){
-  if(i < text.length){
-    document.getElementById("typing").innerHTML += text[i];
-    i++;
-    setTimeout(type, 150);
-  }
-}
-type();
+<img src="assets/Avatar_2.png" width="180" height="180" style="border-radius:50%;">
+
+</p>
 
 
-// ===================
-// 📜 SCROLL REVEAL
-// ===================
-const elements = document.querySelectorAll(".reveal");
+<h3 align="center">
 
-window.addEventListener("scroll", () => {
-  elements.forEach(el => {
-    if(el.getBoundingClientRect().top < window.innerHeight - 100){
-      el.classList.add("show");
-    }
-  });
-});
+Artificial Intelligence Engineer | Machine Learning | Deep Learning | Computer Vision
+
+</h3>
 
 
-// ===================
-// 🔗 GITHUB API
-// ===================
-fetch("https://api.github.com/users/rasulbekdeveloper907")
-.then(res => res.json())
-.then(data => {
-  document.getElementById("github").innerHTML = `
-    <p>Username: ${data.login}</p>
-    <p>Repos: ${data.public_repos}</p>
-    <p>Followers: ${data.followers}</p>
-    <a href="${data.html_url}" target="_blank" style="color:#00d4ff">Open GitHub</a>
-  `;
-});
+<p align="center">
+
+Building intelligent systems with Machine Learning,
+Deep Learning and Computer Vision technologies.
+
+</p>
+
+
+<p align="center">
+
+<a href="https://rasulbekdeveloper907.github.io">
+Portfolio Website
+</a>
+
+&nbsp; | &nbsp;
+
+<a href="https://github.com/rasulbekdeveloper907">
+GitHub
+</a>
+
+</p>
+
+
+---
+
+# 👨‍💻 About Me
+
+
+I am an Artificial Intelligence Engineer specializing in:
+
+- Machine Learning
+- Deep Learning
+- Computer Vision
+- Natural Language Processing
+- AI Deployment
+- MLOps
+
+
+I build end-to-end AI solutions:
