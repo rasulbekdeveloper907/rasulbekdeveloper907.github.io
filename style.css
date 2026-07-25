@@ -275,23 +275,18 @@ align-items:center;
 
 .hero-image img{
 
+    width:200px;
 
-width:280px;
+    height:200px;
 
-height:280px;
+    object-fit:cover;
 
+    border-radius:50%;
 
-object-fit:cover;
+    border:4px solid #2563eb;
 
-
-border-radius:30px;
-
-
-box-shadow:
-
-
-0 25px 60px rgba(0,0,0,.15);
-
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
 
 }
 
